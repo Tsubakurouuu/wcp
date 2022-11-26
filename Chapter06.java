@@ -1,17 +1,20 @@
 public class Chapter06 {
     public static void main(String[] args) {
-        int a;
-        int c;
+        int a = 5;
+        boolean c;
         
-        a = 5;
-        c = ++a;  // a をインクリメントした後に、a が c に代入される
+        c = a < 5;   // c = false
         System.out.println(c);
-        // それぞれの値は、a が「6」で c も「6」
-        
-        a = 5;
-        c = a++;  // a を c に代入した後に、a がインクリメントされる
+        c = a <= 5;  // c = true
         System.out.println(c);
-        // それぞれの値は、a が「6」で c が「5」
-        
+        c = a > 4;   // c = true
+        System.out.println(c);
+        c = a >= 6;  // c = false
+        System.out.println(c);
+        c = a == 5;  // c = true
+        System.out.println(c);
+        c = a != 5;  // c = false
+        System.out.println(c);
+
     }
 }
