@@ -1,19 +1,20 @@
 public class Chapter06 {
     public static void main(String[] args) {
-        int a = 5;
+        boolean a = true;
+        boolean b = false;
         boolean c;
         
-        c = a < 5;   // c = false
+        c = a && true;   // c = true
         System.out.println(c);
-        c = a <= 5;  // c = true
+        c = a && false;  // c = false
         System.out.println(c);
-        c = a > 4;   // c = true
+        c = b || true;   // c = true
         System.out.println(c);
-        c = a >= 6;  // c = false
+        c = b || false;  // c = false
         System.out.println(c);
-        c = a == 5;  // c = true
+        c = !a;          // c = false
         System.out.println(c);
-        c = a != 5;  // c = false
+        c = !b;          // c = true
         System.out.println(c);
 
     }
