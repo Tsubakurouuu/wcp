@@ -1,16 +1,26 @@
 public class Chapter08 {
   public static void main(String[] args) {
+    // 1.「while」文
     int number = 1;
-    printNum(number);
-  }
-
-  public static int printNum(int number) {
-    if (number < 50) {
-      number *= 2;
-      System.out.println("Chapter08 = " + number);
-      // 条件にマッチしたら自分自身を再度呼び出す
-      printNum(number);
+    int multiplier;
+    while (number < 5) {
+      multiplier = number * number;
+      number++;
+      System.out.println(multiplier);
     }
-    return number;
+    
+    // 2. 通常「for」文
+    int array[] = { 1, 2, 3, 4 };
+    for (int i = 0; i < array.length; i++) {
+      System.out.println(array[i]);
+    }
+    
+    // 3. 拡張「for」文
+    for (int val : array) {
+      if (val % 2 == 0) {
+        continue;
+      }
+      System.out.println(val);
+    }
   }
 }
