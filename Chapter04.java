@@ -1,10 +1,12 @@
 public class Chapter04 {
     public static void main(String[] args) {
-        // 定数の宣言
-        final int MIN_NUMBER = 10;
-        System.out.println(MIN_NUMBER);
+        String name = "Yuya";
+        System.out.println(name);
 
-        // 再代入しようとするとエラー
-        //MIN_NUMBER = 20;
+        name = "あいう";
+        System.out.println(name);
+
+        final int NUMBER = 7;
+        System.out.println(NUMBER);
     }
 }
