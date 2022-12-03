@@ -1,14 +1,20 @@
 public class Chapter05 {
     public static void main(String[] args) {
-        String string1;
-        // "あいう"の文字数を出力
-        string1 = "あいう";
-        System.out.println(string1 + "の文字数：" + string1.length());
-        // ""(空文字)の文字数を出力
-        string1 = "";
-        System.out.println(string1 + "の文字数：" + string1.length());
-        // nullの変数を参照するとNullPointExceptionのエラー
-        string1 = null;
-        System.out.println(string1 + "の文字数：" + string1.length());
+        long long1 = 498379498729827L;
+        System.out.println(long1);
+        double double1 = 1234.5678;
+        System.out.println(double1);
+        boolean boolean1 = true;
+        System.out.println(boolean1);
+
+        Float float1 = 1.234f;
+        System.out.println(float1);
+        Integer integer1 = 1;
+        System.out.println(integer1);
+        Character character1 = 'あ';
+        System.out.println(character1);
+
+        int[] array1 = new int[] { 1, 2, 3, 4, 5 };
+        System.out.println(array1[3]);
     }
 }
