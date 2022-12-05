@@ -1,8 +1,10 @@
 public class Chapter08 {
     public static void main(String[] args) {
-        int[] array = { 1, 2, 3, 4, 5 };
-        for (int number : array) {
-            System.out.println("Chapter08 = " + number);
+        for (int count = 0; count < 5; count++) {
+            if (count == 2) {
+                break;
+            }
+            System.out.println("Chapter08 = " + count);
         }
     }
 }
