@@ -1,10 +1,14 @@
 public class confirmation_problem {
     public static void main(String[] args) {
-        String name = "Yuya";
-        System.out.println(name);
-        name = "あいう";
-        System.out.println(name);
-        final int NUMBER = 7;
-        System.out.println(NUMBER);
+        int val = 2 + 5;
+        System.out.println(val);
+        val++;
+        System.out.println(val);
+        val *=  5;
+        System.out.println(val);
+        boolean bool = val == 50;
+        System.out.println(bool);
+        bool = val < 50 && val % 10 == 0;
+        System.out.println(bool);
     }
 }
