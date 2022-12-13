@@ -1,18 +1,21 @@
 public class confirmation_problem {
-    public static void main(String[] args) {
-      String str = "yellow";
-      switch (str) {
-        case "red":
-          System.out.println("赤信号です");
-          break;
-        case "yellow":
-          System.out.println("黄信号です");
-          break;
-        case "blue":
-          System.out.println("青信号です");
-          break;
-        default:
-          System.out.println("信号の色ではありません");
-        }
-    }
+  public static void main(String[] args) {
+		int i = 1;
+	    while (i < 5) {
+	    	System.out.println(i * i);
+	        i++;
+	    }
+	    
+	    int[] a = new int[] { 1, 2, 3, 4 };
+	    for (i = 0; i < a.length; i++) {
+	    	System.out.println(a[i]);
+	    }
+	    
+	    for (int num : a) {
+	    	if (num % 2 == 0) {
+	    		continue;
+	    	}
+	    	System.out.println(num);
+	    }
+	}
 }
