@@ -1,8 +1,8 @@
 public class Main {
-	public static void main(String[] args) {
-		int a = 3;
-		int b = 5;
-		int c = a * b;
-		System.out.println("縦幅" + a + "横幅" + b + "の長方形の面積は、" + c);
-	}
+  public static void main(String[] args) {
+    String name = "すがわら";
+    System.out.print("私の名前は");
+    System.out.print(name);
+    System.out.print("です");
+  }
 }
