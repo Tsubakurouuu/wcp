@@ -1,16 +1,11 @@
 public class Main {
   public static void main(String[] args) {
-      introduceOnself();
+      email("タイトル","メールアドレス","本文");
   }
 
-  public static void introduceOnself () {
-	  String name = "Yuya";
-	  System.out.println(name);
-	  int age = 24;
-	  System.out.println(age);
-	  double height = 177.2;
-	  System.out.println(height);
-	  char zodiac = '虎';
-	  System.out.println(zodiac);
+  public static void email (String title, String address, String text) {
+	  System.out.println(address + "に、以下のメールを送信しました");
+	  System.out.println("件名：" + title);
+	  System.out.println("本文：" + text);
   }
 }
