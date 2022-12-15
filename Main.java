@@ -1,19 +1,12 @@
 public class Main {
   public static void main(String[] args) {
-    System.out.print("【数当てゲーム】");
-    int ans = new java.util.Random().nextInt(10);
-    for (int i = 0; i < 5; i++) {
-    	System.out.println("0~9の数字を入力してください");
-    	int num = new java.util.Scanner(System.in).nextInt();
-    	if (num == ans) {
-    		System.out.println("アタリ！");
-    		break;
-    	} else {
-    		System.out.println("違います");
-    	}
+    int[] scores = {20, 30, 40, 50, 80};
+    int sum = 0;
+    for (int i = 0; i < scores.length; i++) {
+      sum += scores[i];
     }
-    System.out.println("ゲームを終了します");
-
-
+    int avg = sum / scores.length;
+    System.out.println("合計点:" + sum);
+    System.out.println("平均点:" + avg);
   }
 }
