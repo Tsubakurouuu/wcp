@@ -1,22 +1,16 @@
 public class Main {
-  // 1つ目のaddメソッド
-  public static int add(int x, int y) {
-    return x + y;
-  }
-  // 2つ目のaddメソッド
-  public static double add(double x, double y) {
-    return x + y;
-  }
-  // 3つ目のaddメソッド
-  public static String add(String x, String y) {
-    return x + y;
+  // int型配列を受け取り、
+  // 配列内の要素すべてに1を加えるメソッド
+  public static void incArray(int[] array) {
+    for (int i = 0; i < array.length; i++) {
+      array[i]++;
+    }
   }
   public static void main(String[] args) {
-    System.out.println(add(10, 20));
-                       /* 1つ目のaddメソッドが呼び出される */
-    System.out.println(add(3.5, 2.7));
-                       /* 2つ目のaddメソッドが呼び出される */
-    System.out.println(add("Hello", "World"));
-  }                    /* 3つ目のaddメソッドが呼び出される */
-
+    int[] array = {1, 2, 3};
+    incArray(array);
+    for (int i : array) {
+      System.out.println(i);
+    }
+  }
 }
