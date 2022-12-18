@@ -1,17 +1,18 @@
 public class Main {
   	public static void main(String[] args) {
-  		email("アドレス","テキスト");
+  		double t = calcTriangleArea(10.0, 5.0);
+  		double c = calcCircleArea(5.0);
+  		System.out.println(t);
+  		System.out.println(c);
   	}
 
-  	public static void email (String title, String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：" + title);
-		System.out.println("本文：" + text);
-	}
+  	public static double calcTriangleArea (double bottom, double height) {
+  		double TriangleArea = bottom * height / 2;
+  		return TriangleArea;
+  	}
 
-  	public static void email (String address, String text) {
-		System.out.println(address + "に、以下のメールを送信しました");
-		System.out.println("件名：無題");
-		System.out.println("本文：" + text);
-	}
+	public static double calcCircleArea (double radius) {
+  		double CircleArea = radius * radius * 3.14;
+  		return CircleArea;
+  	}
 }
