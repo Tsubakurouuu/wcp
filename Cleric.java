@@ -6,4 +6,11 @@ public class Cleric {
 	int mp = 10;
 	int MAX_MP = 10;
 
+	public void selfAid() {
+		System.out.println(this.name + "はセルフエイドを唱えた");
+		this.mp -= 5;
+		this.hp = this.MAX_HP;
+		System.out.println("HPが最大まで回復した");
+	}
+
 }
