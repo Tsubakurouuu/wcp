@@ -13,4 +13,16 @@ public class Cleric {
 		System.out.println("HPが最大まで回復した");
 	}
 
+	public int pray(int i) {
+		System.out.println(this.name + "は" + i + "秒間祈った");
+		int recovery = i + new java.util.Random().nextInt(3);
+
+		int recoverActual = Math.min(this.MAX_MP - this.mp, recovery);
+		this.mp = recoverActual;
+		System.out.println("MPが" + recoverActual + "回復した");
+
+
+		return recoverActual;
+	}
+
 }
