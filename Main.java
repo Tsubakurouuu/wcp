@@ -1,12 +1,8 @@
 public class Main {
   public static void main(String[] args) {
-    Hero hero = new Hero();
-    hero.name = "minato";
-    hero.job = "hero";
-    hero.gold = 280;
-
-    final String FORMAT = "%-9s %-13s 所持金%,6d";
-    String s = String.format(FORMAT, hero.getName(), hero.getJob(), hero.getGold());
-    System.out.println(s);
+    long start = System.currentTimeMillis();
+    // ここでなんらかの時間がかかる処理
+    long end = System.currentTimeMillis();
+    System.out.println("処理にかかった時間は..." + (end-start) + "ミリ秒でした");
   }
 }
