@@ -3,12 +3,11 @@ import java.util.*;
 
 public class Main {
   	public static void main(String[] args) {
-    	StringBuilder sb = new StringBuilder();
-    	for(int i = 1; i <= 100; i++) {
-    		sb.append(i).append(",");
+    	public String concatPath(String folder, String file) {
+    		if(!folder.endsWith("¥¥")) {
+    			folder += ¥¥;
+    		}
+    		return folder + file;
     	}
-    	String s = sb.toString();
-    	String[] a = s.split(",");
-    	System.out.println(s);
   	}
 }
