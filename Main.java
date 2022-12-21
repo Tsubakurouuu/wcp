@@ -1,14 +1,13 @@
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 public class Main {
-  	public static void main(String[] args) {
-
-    	LocalDate now = LocalDate.now();
-    	LocalDate future = now.plusDays(100);
-    	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
-    	System.out.println(future.format(fmt));
-  	}
+  public static void main(String[] args) {
+    ArrayList<Integer> points = new ArrayList<Integer>();
+    points.add(10);
+    points.add(80);
+    points.add(75);
+    for (int i : points) {
+      System.out.println(i);
+    }
+  }
 }
