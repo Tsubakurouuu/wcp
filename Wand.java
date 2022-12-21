@@ -7,6 +7,12 @@ public class Wand {
   }
 
   public void setName(String name) {
+	  if(name == null) {
+		  throw new IllegalArgumentException("名前がnullである。処理を中断。");
+	  }
+	  if (name.length() < 3) {
+		  throw new IllegalArgumentException("名前が短すぎる。処理を中断。");
+	  }
 	  this.name = name;
   }
 
@@ -15,6 +21,9 @@ public class Wand {
   }
 
   public void setPower(double power) {
+	  if (power < 0.5 || power >100.0) {
+		  throw new IllegalArgumentException("パワーが正しくない。処理を中断。");
+	  }
 	  this.power = power;
   }
 }
