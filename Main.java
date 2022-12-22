@@ -1,12 +1,8 @@
-import java.util.ArrayList;
-import java.io.*;
+import java.io.IOException;
 
 public class Main {
-  	public static void main(String[] args) {
-  		try {
-  			int i = Integer.parseInt("三");
-  		} catch (NumberFormatException e) {
-  			System.out.println("NumberFormatException例外をcatchしました");
-  		}
-  	}
+  public static void main(String[] args) throws IOException {
+    System.out.println("プログラムが起動しました");
+    throw new IOException();
+  }
 }
