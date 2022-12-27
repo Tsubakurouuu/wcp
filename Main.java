@@ -1,15 +1,9 @@
 
 public class Main {
 	public static void main(String[] args) {
-		int n = ClassA.getNumber();
-		System.out.println();
+		SubClass sub = new SubClass();
+		sub.setNum(10);
+		System.out.println(sub.getNum());
 	}
 }
 
-class ClassA {
-	private int number = 0;
-
-	public static int getNumber() {
-		return number;
-	}
-}
