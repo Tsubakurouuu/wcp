@@ -1,11 +1,14 @@
 
 public class Main {
 	public static void main(String[] args) {
-		int a = 0;
-		do {
-			a++;
-			System.out.print("hi ");
-		} while(a < 4);
+		int result = 0;
+		long start = System.currentTimeMillis();
+
+		for(int i = 0;i < 100000000; i++) {
+			result += i;
+		}
+		long end = System.currentTimeMillis();
+		System.out.println((end -start) + "ms");
 	}
 }
 
