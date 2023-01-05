@@ -1,8 +1,19 @@
+class Test {
+  public void method(String s, int... a) {
+    System.out.println(s + " サイズ : " + a.length);
+    for(int i : a){
+      System.out.println("  第2引数の値  :" + i);
+    }
+  }
+}
 public class Main {
   public static void main(String[] args) {
-    String[] ary1 = new String[2];
-    String[] ary2 = {new String("A"), "B"};
-    for(String s : ary1){ System.out.print(s + " "); }
-    for(String s : ary2){ System.out.print(s + " "); }
+    Test obj = new Test();
+    int[] ary = {10, 20, 30};
+    obj.method("1 回目 ");
+    obj.method("2 回目 ", 10);
+    obj.method("3 回目 ", 10, 20);
+    obj.method("4 回目 ", ary);
+    //obj.method("5 ��� ", null);
   }
 }
