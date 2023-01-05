@@ -1,25 +1,8 @@
 public class Main {
   public static void main(String[] args) {
-    loop1:     // ���x��loop1���w��
-    for(int x = 0; x < 3 ; x++){
-      for(int y = 0; y < 3; y++){
-        System.out.println("x = " + x + " y = " + y);
-        if(x == 1 && y ==1){
-          System.out.println("break文の実行");
-          break loop1;  // ���x��loop1��break
-        }
-      }
-    }
-    System.out.println("------------------------------");
-    loop2:     // ���x��loop2���w��
-    for(int x = 0; x < 3 ; x++){
-      for(int y = 0; y < 3; y++){
-        System.out.println("x = " + x + " y = " + y);
-        if(x == 1 && y ==1){
-          System.out.println("continue文の実行");
-          continue loop2;  // ���x��loop2��continue
-        }
-      }
-    }
+    String[] ary1 = new String[2];
+    String[] ary2 = {new String("A"), "B"};
+    for(String s : ary1){ System.out.print(s + " "); }
+    for(String s : ary2){ System.out.print(s + " "); }
   }
 }
