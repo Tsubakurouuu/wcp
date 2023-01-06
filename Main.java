@@ -1,22 +1,34 @@
+import java.util.*;
+class Employee {
+  private String name;
+  private Integer id;
+  public Employee(String name, Integer id) {
+    this.name = name; this.id = id;
+  }
+  public Integer getId() { return id; }
+  public String getName() { return name; }
+}
+class MyRule implements Comparator<Employee> {
+  public int compare(Employee obj1, Employee obj2) {
+    return obj1.getId().compareTo(obj2.getId());
+  }
+}
 public class Main {
-  int x = 3;
-  static int y = 2;
-
   public static void main(String[] args) {
-    int x = 10;
-    int y = 10;
-    Main obj = new Main();
-    obj.printIt();
-    obj.printIt(y);
+    Employee e1 = new Employee("taro", 20);
+    Employee e2 = new Employee("tomoko", 10);
+    Employee e3 = new Employee("hiromi", 50);
+    ArrayList<Employee> ary = new ArrayList<>();
+    ary.add(e1); ary.add(e2); ary.add(e3);
+    System.out.println("ArrayList �̃C���f�b�N�X���ł̕\��");
+    print(ary);
+    System.out.println("MyRule �Œ�`����id �̏����ł̕\��");
+    Collections.sort(ary, new MyRule());
+    print(ary);
   }
-
-  Main() { x = x+1; }
-  static { y += y; }
-
-  void printIt() {
-     System.out.print(++x);
-  }
-  void printIt(int y) {
-    System.out.print(" " + ++y);
+  public static void print(ArrayList<Employee> ary) {
+    for(Employee obj : ary){
+      System.out.println(obj.getId() + " " + obj.getName());
+    }
   }
 }
