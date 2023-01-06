@@ -1,19 +1,22 @@
-class Test {
-  public void method(String s, int... a) {
-    System.out.println(s + " サイズ : " + a.length);
-    for(int i : a){
-      System.out.println("  第2引数の値  :" + i);
-    }
-  }
-}
 public class Main {
+  int x = 3;
+  static int y = 2;
+
   public static void main(String[] args) {
-    Test obj = new Test();
-    int[] ary = {10, 20, 30};
-    obj.method("1 回目 ");
-    obj.method("2 回目 ", 10);
-    obj.method("3 回目 ", 10, 20);
-    obj.method("4 回目 ", ary);
-    //obj.method("5 ��� ", null);
+    int x = 10;
+    int y = 10;
+    Main obj = new Main();
+    obj.printIt();
+    obj.printIt(y);
+  }
+
+  Main() { x = x+1; }
+  static { y += y; }
+
+  void printIt() {
+     System.out.print(++x);
+  }
+  void printIt(int y) {
+    System.out.print(" " + ++y);
   }
 }
