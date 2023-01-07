@@ -1,12 +1,14 @@
-import java.util.HashSet;
-
 public class Main {
   public static void main(String[] args) {
-    String[] ary = {"CCC","AAA","BBB"};
-    HashSet<String> hashSet = new HashSet<String>();
-    hashSet.add(ary[0]);  hashSet.add(ary[1]);
-    hashSet.add(ary[2]);  hashSet.add(ary[0]);
-    System.out.println("HashSet size : " + hashSet.size());
-    for(String s : hashSet){ System.out.print(s + " "); }
+    int[] num = {10, 20, 30};
+    for(int i = 0; i < 4; i++){
+      try {
+        System.out.print("num :" + num[i]);
+        System.out.println(" : " + (i+1) + "回目のループ");
+      } catch(ArrayIndexOutOfBoundsException e) {
+        System.out.println("例外が発生しました");
+      }
+    }
+    System.out.println("-- end --");
   }
 }
