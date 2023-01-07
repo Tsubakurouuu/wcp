@@ -1,34 +1,12 @@
-import java.util.*;
-class Employee {
-  private String name;
-  private Integer id;
-  public Employee(String name, Integer id) {
-    this.name = name; this.id = id;
-  }
-  public Integer getId() { return id; }
-  public String getName() { return name; }
-}
-class MyRule implements Comparator<Employee> {
-  public int compare(Employee obj1, Employee obj2) {
-    return obj1.getId().compareTo(obj2.getId());
-  }
-}
+import java.util.HashSet;
+
 public class Main {
   public static void main(String[] args) {
-    Employee e1 = new Employee("taro", 20);
-    Employee e2 = new Employee("tomoko", 10);
-    Employee e3 = new Employee("hiromi", 50);
-    ArrayList<Employee> ary = new ArrayList<>();
-    ary.add(e1); ary.add(e2); ary.add(e3);
-    System.out.println("ArrayList �̃C���f�b�N�X���ł̕\��");
-    print(ary);
-    System.out.println("MyRule �Œ�`����id �̏����ł̕\��");
-    Collections.sort(ary, new MyRule());
-    print(ary);
-  }
-  public static void print(ArrayList<Employee> ary) {
-    for(Employee obj : ary){
-      System.out.println(obj.getId() + " " + obj.getName());
-    }
+    String[] ary = {"CCC","AAA","BBB"};
+    HashSet<String> hashSet = new HashSet<String>();
+    hashSet.add(ary[0]);  hashSet.add(ary[1]);
+    hashSet.add(ary[2]);  hashSet.add(ary[0]);
+    System.out.println("HashSet size : " + hashSet.size());
+    for(String s : hashSet){ System.out.print(s + " "); }
   }
 }
