@@ -1,15 +1,22 @@
-class Animal {
-  void x() { System.out.print("Animal "); }
-  void y() { x(); }
-}
-class Cow extends Animal {
-  void x() { System.out.print("Cow "); }
-  void z() { x(); }
-}
+class MyException extends RuntimeException { }
+
 public class Main {
+  static void bar() {
+    foo();
+  }
+  static void foo() throws MyException {
+    throw new MyException();
+  }
   public static void main(String[] args) {
-    Cow obj = new Cow();
-    obj.y();
-    obj.z();
+    try {
+      foo();
+      System.out.println("B");
+    } catch(MyException e) {
+      bar();
+    } catch(RuntimeException e) {
+      System.out.println("C");
+    } finally {
+      System.out.println("D");
+    }
   }
 }
