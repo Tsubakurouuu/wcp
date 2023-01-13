@@ -1,22 +1,15 @@
-class MyException extends RuntimeException { }
-
+class A {
+  void x() { System.out.print("A "); }
+}
+class B extends A {
+  void x() { System.out.print("B "); }
+}
 public class Main {
-  static void bar() {
-    foo();
-  }
-  static void foo() throws MyException {
-    throw new MyException();
-  }
   public static void main(String[] args) {
-    try {
-      foo();
-      System.out.println("B");
-    } catch(MyException e) {
-      bar();
-    } catch(RuntimeException e) {
-      System.out.println("C");
-    } finally {
-      System.out.println("D");
-    }
+    B b = new B();
+    A a = new B();
+    a = b;
+    a.x();
+    b.x();
   }
 }
