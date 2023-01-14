@@ -1,9 +1,18 @@
 public class Main {
   public static void main(String[] args) {
-    int num = 10;
-    do {
-    	num++;
-    } while (++num < 10);
-    System.out.println(num);
+    A a = new B();
   }
+
+}
+
+class A {
+	  public A() {
+		  System.out.println("A");
+	  }
+}
+
+class B extends A {
+	  public B() {
+		  System.out.println("B");
+	  }
 }
