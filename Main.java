@@ -1,15 +1,9 @@
-class A {
-  void x() { System.out.print("A "); }
-}
-class B extends A {
-  void x() { System.out.print("B "); }
-}
 public class Main {
   public static void main(String[] args) {
-    B b = new B();
-    A a = new B();
-    a = b;
-    a.x();
-    b.x();
+    int num = 10;
+    do {
+    	num++;
+    } while (++num < 10);
+    System.out.println(num);
   }
 }
