@@ -1,7 +1,10 @@
 public class Main {
   public static void main(String[] args) {
-    if(11.00f > 11) System.out.print("A ");
-    if(1_2 < 12) System.out.print("B ");
-    if(123L > 123) System.out.println("C ");
+    String s1 = "A";
+    String s2 = s1.concat("BC");
+    s1 = null;
+    String s3 = s2.replace('C', 'D');
+    String s4 = s3.concat("E");
+    System.out.println(s1 + " " + s4);
   }
 }
